@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         // for array content
         self.tableView.backgroundColor = darkOrange
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
