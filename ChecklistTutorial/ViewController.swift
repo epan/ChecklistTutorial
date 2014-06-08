@@ -62,9 +62,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         
-        
         var myNewCell: MyTableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as MyTableViewCell
-        
+
+        myNewCell.detailTextLabel.text = "test text"
         myNewCell.text = self.tableViewData[indexPath.row]
         myNewCell.backgroundColor = medOrange
         myNewCell.textColor = UIColor.whiteColor()
