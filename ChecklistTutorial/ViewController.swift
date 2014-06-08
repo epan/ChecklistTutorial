@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         var myNewCell: MyTableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as MyTableViewCell
 
-        myNewCell.detailTextLabel.text = "test text"
+        // myNewCell.detailTextLabel.text = "test detail text"
         myNewCell.text = self.tableViewData[indexPath.row]
         
         return myNewCell
