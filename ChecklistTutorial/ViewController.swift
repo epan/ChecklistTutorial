@@ -45,6 +45,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         // Set up text field
         self.textField = UITextField(frame: CGRectMake(0, 0, self.view.bounds.size.width, 100))
         self.textField.backgroundColor = lightOrange
+        self.textField.font = UIFont(name: "AvenirNext-Medium", size: 22)
+        self.textField.textColor = UIColor.whiteColor()
         self.textField.delegate = self
         
         self.view.addSubview(self.textField)
