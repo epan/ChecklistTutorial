@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     var tableView: UITableView!
     var textField: UITextField!
-    var tableViewData = ["my text 1", "my text 2"]
+    var tableViewData = String[]()
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
