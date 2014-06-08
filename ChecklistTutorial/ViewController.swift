@@ -73,8 +73,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         let mySelectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)
+        
+        // Colors
         mySelectedCell.detailTextLabel.textColor = UIColor.whiteColor()
+        mySelectedCell.tintColor = UIColor.whiteColor()
+        
         mySelectedCell.detailTextLabel.text = "I finished my task!"
+        mySelectedCell.accessoryType = UITableViewCellAccessoryType.Checkmark
         mySelectedCell.backgroundColor = green
     }
 
