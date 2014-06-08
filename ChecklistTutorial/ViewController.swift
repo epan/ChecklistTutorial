@@ -12,12 +12,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     var tableView: UITableView!
     var textField: UITextField!
-    var tableViewData = String[]()
+    var tableViewData = ["Task 1", "Task 2"]
     
     // Define colors
     let lightOrange: UIColor = UIColor(red: 0.996, green: 0.467, blue: 0.224, alpha: 1)
     let medOrange: UIColor = UIColor(red: 0.973, green: 0.388, blue: 0.173, alpha: 1)
     let darkOrange: UIColor = UIColor(red: 0.796, green: 0.263, blue: 0.106, alpha: 1)
+    let green: UIColor = UIColor(red: 0.251, green: 0.831, blue: 0.494, alpha: 1)
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -51,7 +52,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
     }
     
-    // Table View Data Source Delegate
+    // Table View Delegate
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
 
@@ -68,6 +69,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         myNewCell.text = self.tableViewData[indexPath.row]
         
         return myNewCell
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        let mySelectedCell: UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)
+        mySelectedCell.detailTextLabel.textColor = UIColor.whiteColor()
+        mySelectedCell.detailTextLabel.text = "I finished my task!"
+        mySelectedCell.backgroundColor = green
     }
 
     // Text Field Delegate
