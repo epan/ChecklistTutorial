@@ -13,6 +13,11 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     var tableView: UITableView!
     var textField: UITextField!
     var tableViewData = String[]()
+    
+    // Define colors
+    let lightOrange: UIColor = UIColor(red: 0.996, green: 0.467, blue: 0.224, alpha: 1)
+    let medOrange: UIColor = UIColor(red: 0.973, green: 0.388, blue: 0.173, alpha: 1)
+    let darkOrange: UIColor = UIColor(red: 0.796, green: 0.263, blue: 0.106, alpha: 1)
 
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -29,6 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "myCell")
         
         // for array content
+        self.tableView.backgroundColor = darkOrange
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -36,7 +42,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         // Set up text field
         self.textField = UITextField(frame: CGRectMake(0, 0, self.view.bounds.size.width, 100))
-        self.textField.backgroundColor = UIColor.redColor()
+        self.textField.backgroundColor = lightOrange
         self.textField.delegate = self
         
         self.view.addSubview(self.textField)
@@ -57,6 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         let myNewCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
         
         myNewCell.text = self.tableViewData[indexPath.row]
+        myNewCell.backgroundColor = medOrange
+        myNewCell.textColor = UIColor.whiteColor()
         
         return myNewCell
     }
