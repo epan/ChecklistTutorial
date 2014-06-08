@@ -66,9 +66,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
         myNewCell.detailTextLabel.text = "test text"
         myNewCell.text = self.tableViewData[indexPath.row]
-        myNewCell.backgroundColor = medOrange
-        myNewCell.textColor = UIColor.whiteColor()
-        myNewCell.selectionStyle = UITableViewCellSelectionStyle.None
         
         return myNewCell
     }
