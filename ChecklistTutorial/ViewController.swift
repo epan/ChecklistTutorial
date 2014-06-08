@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         // Set up table view
         self.tableView = UITableView(frame: CGRectMake(0, 100, self.view.bounds.size.width, self.view.bounds.size.height - 100), style: UITableViewStyle.Plain)
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "myCell")
+        self.tableView.registerClass(MyTableViewCell.self, forCellReuseIdentifier: "myCell")
         
         // for array content
         self.tableView.backgroundColor = darkOrange
@@ -61,7 +61,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
-        let myNewCell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as UITableViewCell
+        
+        
+        var myNewCell: MyTableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath) as MyTableViewCell
         
         myNewCell.text = self.tableViewData[indexPath.row]
         myNewCell.backgroundColor = medOrange

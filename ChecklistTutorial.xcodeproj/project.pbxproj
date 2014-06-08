@@ -11,6 +11,7 @@
 		55A8010219442DED00103321 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A8010119442DED00103321 /* Images.xcassets */; };
 		55A8010E19442DED00103321 /* ChecklistTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8010D19442DED00103321 /* ChecklistTutorialTests.swift */; };
 		55A8011819442E1900103321 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A8011719442E1900103321 /* ViewController.swift */; };
+		55A8011A1944447300103321 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A801191944447300103321 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		55A8010C19442DED00103321 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55A8010D19442DED00103321 /* ChecklistTutorialTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistTutorialTests.swift; sourceTree = "<group>"; };
 		55A8011719442E1900103321 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55A801191944447300103321 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				55A8010119442DED00103321 /* Images.xcassets */,
 				55A800FD19442DED00103321 /* Supporting Files */,
 				55A8011719442E1900103321 /* ViewController.swift */,
+				55A801191944447300103321 /* MyTableViewCell.swift */,
 			);
 			path = ChecklistTutorial;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				55A8011819442E1900103321 /* ViewController.swift in Sources */,
 				55A8010019442DED00103321 /* AppDelegate.swift in Sources */,
+				55A8011A1944447300103321 /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
