@@ -37,6 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         // Set up text field
         self.textField = UITextField(frame: CGRectMake(0, 0, self.view.bounds.size.width, 100))
         self.textField.backgroundColor = UIColor.redColor()
+        self.textField.delegate = self
         
         self.view.addSubview(self.textField)
         
@@ -60,6 +61,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         return myNewCell
     }
 
-
+    // Text Field Delegate
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        // called when 'return' key pressed. return NO to ignore.
+        
+        // Appends text to array, clears input, reloads table, removes keyboard
+        tableViewData.append(textField.text)
+        textField.text = ""
+        self.tableView.reloadData()
+        textField.resignFirstResponder()
+        return true
+    }
+    
 
 }
