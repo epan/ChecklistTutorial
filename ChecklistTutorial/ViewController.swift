@@ -78,7 +78,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         mySelectedCell.detailTextLabel.textColor = UIColor.whiteColor()
         mySelectedCell.tintColor = UIColor.whiteColor()
         
-        mySelectedCell.detailTextLabel.text = "I finished my task!"
+        // Setup detail subtitle date
+        let myDate: NSDate = NSDate()
+        var myDateFormatter: NSDateFormatter = NSDateFormatter()
+        myDateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        
+        mySelectedCell.detailTextLabel.text = myDateFormatter.stringFromDate(myDate)
         mySelectedCell.accessoryType = UITableViewCellAccessoryType.Checkmark
         mySelectedCell.backgroundColor = green
     }
